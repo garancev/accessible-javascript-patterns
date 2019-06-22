@@ -1,0 +1,16 @@
+img {
+    max-width: 100%;
+}
+
+a {
+    text-decoration: none;
+    color: #3F7797;
+    padding: 5px 1em;
+    font-size: 22px;
+}
+
+a:hover, a:focus {
+    background-color: #D1BA1A;
+    text-align: center;
+
+}

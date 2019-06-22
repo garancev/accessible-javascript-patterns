@@ -1,0 +1,60 @@
+body {
+    font-family: "Gill Sans", "Gill Sans MT", Calibri, sans-serif;
+    margin: 0;
+}
+
+.visuallyHidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+
+.header {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 200px;
+}
+
+main {
+    margin: 2em;
+}
+
+.img {
+    width: 100%;
+}
+
+.bio {
+    display: inline-block;
+    width: 40%;
+    font-size: 18px;
+    text-align: justify;
+    vertical-align: top;
+}
+
+.gallery-side {
+    display: inline-block;
+    width: 59%;
+}
+
+.gallery-bottom {
+    width: 100%;
+}
+
+.section {
+    margin-top: 75px;
+}
+
+.section a {
+    text-decoration: underline;
+    padding: 1px;
+}
+
+.section a:hover, .section a:focus {
+    background-color: #D1BA1A;
+}

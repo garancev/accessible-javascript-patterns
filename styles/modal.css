@@ -1,0 +1,132 @@
+.btn {
+  background-color: #3F7797;
+  color: #FFF;
+  text-align: center;
+  border: 0;
+  border-radius: 3px;
+}
+
+.btn_open {
+  width: 475px;
+  height: 100px;
+  font-size: 30px;
+  display: block;
+  margin: 40px auto;
+}
+
+.btn:focus,
+.btn:hover {
+  background-color: #D1BA1A;
+  color: #000;
+}
+
+[role=dialog] .btn {
+  margin-left: 15px;
+}
+
+.btn_ok {
+  font-size: 20px;
+  min-width: 100px;
+  height: 2em;
+}
+.btn_cancel {
+  font-size: 18px;
+  height: 2em;
+  background-color: #b43156;
+  width: 85px;
+}
+
+.btn_more {
+  font-size: 20px;
+  height: 2em;
+  width: 110px;
+}
+.hidden {
+  display: none;
+}
+
+  [role="alertdialog"],
+  [role="dialog"] {
+    box-sizing: border-box;
+    padding: 15px;
+    border: 1px solid #3F7797;
+    background-color: #fff;
+    min-height: 100vh;
+  }
+
+  @media screen and (min-width: 640px) {
+    [role="alertdialog"],
+    [role="dialog"] {
+      position: absolute;
+      top: 2rem;
+      left: 50vw;  /* move to the middle of the screen (assumes relative parent is the body/viewport) */
+      transform: translateX(-50%);  /* move backwards 50% of this element's width */
+      min-width: calc(640px - (15px * 2));  /* == breakpoint - left+right margin */
+      min-height: auto;
+      box-shadow: 0 19px 38px rgba(0, 0, 0, 0.12), 0 15px 12px rgba(0, 0, 0, 0.22);
+    }
+  }
+
+  .dialog_header {
+    text-align: center;
+  }
+
+  .label {
+    display: inline-block;
+    width: 30%;
+    text-align: right;
+    padding-right: 0.5em;
+    font-weight: 600;
+  }
+
+  .dialog_form_item {
+    margin-bottom: 20px;
+  }
+
+  .input {
+    box-sizing: border-box;
+    max-width: 70%;
+    width: 17em;
+    height: 2.5em;
+  }
+
+  .dialog_form_actions {
+    text-align: right;
+    padding: 0 20px 20px;
+  }
+
+  .dialog_desc {
+    padding: 10px 20px;
+  }
+
+  /* native <dialog> element uses the ::backdrop pseudo-element */
+
+  /* dialog::backdrop, */
+  .dialog-backdrop {
+    display: none;
+    position: fixed;
+    overflow-y: auto;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+  }
+
+  @media screen and (min-width: 640px) {
+    .dialog-backdrop {
+      background: rgba(0, 0, 0, 0.3);
+    }
+  }
+
+  .dialog-backdrop.active {
+    display: block;
+  }
+
+  .no-scroll {
+    overflow-y: auto !important;
+  }
+
+  /* this is added to the body when a dialog is open */
+  .has-dialog {
+    overflow: hidden;
+  }
