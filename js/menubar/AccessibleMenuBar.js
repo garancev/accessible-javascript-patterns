@@ -1,5 +1,9 @@
 import AccessibleMenuBarItem from "./AccessibleMenuBarItem.js";
 
+/**
+ * Entry point of the navigation menu.
+ * Each menubarItem is a top-level, always visible.  menu item.
+ */
 export default class AccessibleMenuBar {
     constructor(domNode) {
         this.domNode = domNode;

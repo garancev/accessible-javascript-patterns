@@ -6,7 +6,10 @@ import { isPrintableCharacter } from '../helpers.js';
  *   https://www.w3.org/Consortium/Legal/2015/copyright-software-and-document
  */
 
-
+/**
+ * Menu items are the deepest element possible - there are nested links.
+ * They are contained inside a popupMenu.
+ */
 export default class AccessibleMenuItem {
     constructor(domNode, menuObj) {
         this.domNode = domNode;
@@ -21,9 +24,6 @@ export default class AccessibleMenuItem {
         this.domNode.addEventListener('blur', this.handleBlur.bind(this));
         this.domNode.addEventListener('mouseover', this.handleMouseover.bind(this));
         this.domNode.addEventListener('mouseout', this.handleMouseout.bind(this));
-
-        // Initialize flyout menu
-        const nextElement = this.domNode.nextElementSibling;
     }
 
     isExpanded() {

@@ -16,6 +16,11 @@ function setFocusToMenubarItem(controller, close) {
     return false;
 }
 
+/*
+* The popupMenu has a similar role as the MenuBar, but is at least 1 level deep.
+* It is not always visible, and is the single child of a MenuBarItem.
+* It contains menuitems.
+*/
 export default class PopupMenu {
     constructor(domNode, controllerObj) {
         this.domNode = domNode;

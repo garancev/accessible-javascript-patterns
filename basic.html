@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Accessible Javascript Patterns</title>
+    <link rel="stylesheet" href="./styles/main.css">
+    <link rel="stylesheet" href="./styles/menubar.css">
+    <link rel="stylesheet" href="./styles/modal.css">
+  </head>
+  <body>
+    <header class="header">
+      <h1 class="title">Accessible Javascript Patterns</h1>
+      <nav aria-labelledby="mainmenulabel" class="nav">
+        <h2 id="mainmenulabel" class="visuallyHidden">Main menu</h3>
+        <ul id="menubar1" role="menubar">
+
+          <li role="none">
+            <a role="menuitem"
+            aria-haspopup="true"
+            aria-expanded="false"
+            href="#audubon"
+            tabindex="0"> Jean Audubon
+            <svg>
+                <use xlink:href="./assets/sprite.svg#triangle-down"></use>
+            </svg>
+          </a>
+
+            <ul role="menu" aria-label="Birds of America">
+              <li role="none">
+                <a role="menuitem" href="./pages/duck.html">
+                  King duck
+                </a>
+              </li>
+              <li role="none">
+                <a role="menuitem" href="./pages/swan.html">
+                  American swan
+                </a>
+              </li>
+              <li role="none">
+                <a role="menuitem" href="./pages/cormorant.html">
+                  Florida cormorant
+                </a>
+              </li>
+              <li role="none">
+                <a role="menuitem" href="./pages/avocet.html">
+                  American Avocet
+                </a>
+              </li>
+              <li role="none">
+                <a role="menuitem" href="./pages/flamingo.html">
+                  American Flamingo
+                </a>
+              </li>
+              <li role="none">
+                <a role="menuitem" href="./pages/lark.html">
+                  Meadow Lark
+                </a>
+              </li>
+              <li role="none">
+                <a role="menuitem" href="./pages/chat.html">
+                  Yellow Breasted Chat
+                </a>
+              </li>
+              <li role="none">
+                <a role="menuitem" href="./pages/buzzard.html">
+                  Turkey Buzzard
+                </a>
+              </li>
+              <li role="none">
+                <a role="menuitem" href="./pages/eagle.html">
+                  Caracara Eagle
+                </a>
+              </li>
+              <li role="none">
+                <a role="menuitem" href="./pages/pigeon.html">
+                  Blue Headed Pigeon
+                </a>
+              </li>
+              <li role="none">
+                <a role="menuitem" href="./pages/ptarmigan.html">
+                  American Ptarmigan
+                </a>
+              </li>
+              <li role="none">
+                <a role="menuitem" href="./pages/eagle.1.html">
+                  Golden Eagle
+                </a>
+              </li>
+              <li role="none">
+                <a role="menuitem" href="./pages/hummingbird.html">
+                  Mango Hummingbird
+                </a>
+              </li>
+              <li role="none">
+                <a role="menuitem" href="./pages/goldfinch.html">
+                  American Goldfinch
+                </a>
+              </li>
+          </ul>
+          </li>
+
+          <li role="none">
+              <a role="menuitem"
+              aria-haspopup="true"
+              aria-expanded="false"
+              href="#deboodt"
+              tabindex="0"> Anselmus de Boodt
+              <svg>
+                  <use xlink:href="./assets/sprite.svg#triangle-down"></use>
+              </svg>
+            </a>
+
+              <ul role="menu" aria-label="Natural Paintings">
+                <li role="none">
+                  <a role="menuitem" href="./pages/turtle.html" aria-current="page">
+                    Sea turtle
+                  </a>
+                </li>
+                <li role="none">
+                  <a role="menuitem" href="./pages/hippocampus.html">
+                    Hippocampus
+                  </a>
+                </li>
+                <li role="none">
+                  <a role="menuitem" href="./pages/whale.html">
+                    Whale
+                  </a>
+                </li>
+                <li role="none">
+                  <a role="menuitem" href="./pages/cassowary.html">
+                    Helmet Cassowary
+                  </a>
+                </li>
+                <li role="none">
+                  <a role="menuitem" href="./pages/camel.html">
+                    Camel and Giraffe
+                  </a>
+                </li>
+                <li role="none">
+                  <a role="menuitem" href="./pages/cat.html">
+                    Cat
+                  </a>
+                </li>
+                <li role="none">
+                  <a role="menuitem" href="./pages/macaw.html">
+                    Scarlet macaw
+                  </a>
+                </li>
+                <li role="none">
+                  <a role="menuitem" href="./pages/porcupine.html">
+                    Crested Porcupine
+                  </a>
+                </li>
+                <li role="none">
+                  <a role="menuitem" href="./pages/chameleon.html">
+                    Chameleon
+                  </a>
+                </li>
+                <li role="none">
+                  <a role="menuitem" href="./pages/elephant.html">
+                    Asian Elephant
+                  </a>
+                </li>
+                <li role="none">
+                  <a role="menuitem" href="./pages/armadillo.html">
+                    Bullet Armadillo
+                  </a>
+                </li>
+                <li role="none">
+                  <a role="menuitem" href="./pages/seal.html">
+                    Seal
+                  </a>
+                </li>
+            </ul>
+            </li>
+        </ul>
+      </nav>
+    </header>
+  <main>
+    <img src="./assets/heron.jpg" alt="Great white heron drawn by John Audubon" class="img">
+    <section class="section" id="audubon">
+    <h2>John James Audubon</h2>
+    <p class="bio">John James Audubon (born Jean Rabin; April 26, 1785 – January 27, 1851) was an American
+      <a href="https://en.wikipedia.org/wiki/Ornithology">ornithologist</a>, <a href="https://en.wikipedia.org/wiki/Natural_history">naturalist</a>,
+      and <a href="https://en.wikipedia.org/wiki/Painting">painter</a>.
+      He was notable for his extensive studies documenting all types of American birds and for his detailed illustrations that depicted the birds in their natural habitats.
+      His major work, a color-plate book entitled <a href="https://en.wikipedia.org/wiki/The_Birds_of_America">The Birds of America</a> (1827–1839),
+      is considered one of the finest ornithological works ever completed. Audubon identified 25 new species.
+      </p>
+      <img class="gallery-side" src="./assets/audubon-1.jpg" alt="Gallery of Audubon's bird drawings"></img>
+      <img class="gallery-bottom" src="./assets/audubon-2.jpg" alt=""></img>
+    </section>
+    <section class="section" id="deboodt">
+      <h2>Anselmus Boëtius de Boodt</h2>
+      <p class="bio">Anselmus de Boodt or Anselmus Boëtius de Boodt (Bruges, 1550 - Bruges, 21 June 1632) was a Flemish
+        <a href="https://en.wikipedia.org/wiki/Humanism">humanist</a>, <a href="https://en.wikipedia.org/wiki/Mineralogy">mineralogist</a>,
+        <a href="https://en.wikipedia.org/wiki/Physician">physician</a> and <a href="https://en.wikipedia.org/wiki/Natural_history">naturalist</a>.
+        Along with the German known as Georgius Agricola, de Boodt was responsible for establishing modern mineralogy.
+        De Boodt was an avid mineral collector who travelled widely to various mining regions in Germany, Bohemia and Silesia to collect samples.
+        His definitive work on the subject was the Gemmarum et Lapidum Historia (1609).
+      </p>
+      <img class="gallery-side" src="./assets/boodt-1.jpg" alt="Gallery of Boodt's animal drawings"></img>
+      <img class="gallery-bottom" src="./assets/boodt-2.jpg" alt=""></img>
+    </section>
+
+    <button id="open-modal" class="btn btn_open" >I want to receive bird images</button>
+</main>
+
+<div role="dialog"
+    id="address"
+    aria-labelledby="address_label"
+    aria-modal="true"
+    class="hidden">
+  <h2 id="address_label" class="dialog_header">
+    Add Delivery Address
+  </h2>
+  <div class="dialog_form">
+    <div class="dialog_form_item">
+      <label>
+        <span class="label">
+          Name
+        </span>
+        <input type="text" class="input">
+      </label>
+    </div>
+    <div class="dialog_form_item">
+      <label>
+        <span class="label">
+          Email
+        </span>
+        <input type="text" class="input">
+      </label>
+    </div>
+  </div>
+  <div class="dialog_form_actions">
+    <button id="open-more" class="btn btn_more">
+      About us
+    </button>
+    <button class="btn btn_ok" id="open-ok">
+      Add
+    </button>
+    <button id="cancel" class="btn btn_cancel">
+      Cancel
+    </button>
+  </div>
+</div>
+<!--  Second modal to open on top of the first modal  -->
+<div id="privacy"
+     role="dialog"
+     aria-labelledby="privacy_label"
+     aria-describedby="privacy_desc"
+     aria-modal="true"
+     class="hidden">
+  <h2 id="privacy_label" class="dialog_header">
+    We care about you!
+  </h2>
+  <div id="privacy_desc" class="dialog_desc">
+    <p tabindex="-1" id="privacy_para1">
+        Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros. Nullam malesuada erat ut turpis. Suspendisse urna nibh, viverra non, semper suscipit, posuere a, pede.
+    </p>
+    <p>
+        Donec nec justo eget felis facilisis fermentum. Aliquam porttitor mauris sit amet orci. Aenean dignissim pellentesque felis.
+    </p>
+    <ul>
+      <li>
+        Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
+      </li>
+      <li>
+        Aliquam tincidunt mauris eu risus.
+      </li>
+      <li>
+        Vestibulum auctor dapibus neque.
+      </li>
+      <li>
+        Nunc dignissim risus id metus.
+        <ul>
+          <li>
+            Cras ornare tristique elit.
+          </li>
+          <li>
+            Vivamus vestibulum ntulla nec ante.
+          </li>
+        </ul>
+      </li>
+    </ul>
+    <p>
+      Morbi in sem quis dui placerat ornare. Pellentesque odio nisi, euismod in, pharetra a, ultricies in, diam. Sed arcu. Cras consequat.
+    </p>
+    <ul>
+      <li>
+        Praesent placerat risus quis eros.
+      </li>
+      <li>
+        Fusce pellentesque suscipit nibh.
+      </li>
+    </ul>
+    <p>
+        Praesent dapibus, neque id cursus faucibus, tortor neque egestas auguae, eu vulputate <em>magna</em> eros eu erat. Aliquam erat volutpat. Nam dui mi, tincidunt quis, accumsan porttitor, facilisis luctus, metus.
+    </p>
+    <ul>
+      <li>
+        Vivamus vestibulum ntulla nec ante.
+      </li>
+      <li>
+        Praesent placerat risus quis eros.
+      </li>
+      <li>
+        Phasellus ultrices nulla quis nibh. Quisque a lectus. Donec consectetuer ligula vulputate sem tristique cursus. Nam nulla quam, gravida non, commodo a, sodales sit amet, nisi.
+      </li>
+      <li>
+        Fusce pellentesque suscipit nibh.
+      </li>
+      <li>
+        Integer vitae libero ac risus egestas placerat.
+      </li>
+    </ul>
+  </div>
+  <div class="dialog_form_actions">
+    <button id="back-address" class="btn btn_ok" >
+      Back to the address form
+    </button>
+  </div>
+</div>
+<!--  Dialog that replaces dialog 1.  -->
+<div id="confirm"
+     role="dialog"
+     aria-labelledby="confirm_label"
+     aria-describedby="confirm_desc"
+     aria-modal="true"
+     class="hidden">
+  <h2 id="confirm_label" class="dialog_header">
+    Address Added
+  </h2>
+  <p id="confirm_desc" class="dialog_desc">
+    You will now receive great bird pictures.
+  </p>
+  <div class="dialog_form_actions">
+    <button id="confirm_close_btn" class="btn btn_ok">
+      OK
+    </button>
+  </div>
+</div>
+<script type="module" src="./js/basic.js"></script>
+
+  </body>
+</html>
