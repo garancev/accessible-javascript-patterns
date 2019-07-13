@@ -1,9 +1,15 @@
 import AccessibleMenuBar from "./menubar/AccessibleMenuBar.js";
 import AccessibleModal from "./modal/AccessibleModal.js";
+import MobileNav from "./MobileNav.js";
 
 
 function start() {
-    new AccessibleMenuBar(document.querySelector('#menubar1'));
+    //fixme: cheap & dirty mobile detection
+    if (window.innerWidth > 600) {
+        new AccessibleMenuBar(document.querySelector('#menubar1'));
+    } else {
+        new MobileNav(document.querySelector('#btn_nav'), document.querySelector('#nav'));
+    }
     new AccessibleModal();
 
 }

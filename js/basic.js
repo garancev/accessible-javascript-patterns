@@ -1,8 +1,12 @@
 import BasicMenuBar from "./menubar-basic/BasicMenuBar.js";
 
 function start() {
-    new BasicMenuBar(document.querySelector('#menubar1'));
-
+    //fixme: cheap & dirty mobile detection
+    if (window.innerWidth > 600) {
+        new AccessibleMenuBar(document.querySelector('#menubar1'));
+    } else {
+        new MobileNav(document.querySelector('#btn_nav'), document.querySelector('#nav'));
+    }
 }
 document.addEventListener("DOMContentLoaded", start, false);
 
