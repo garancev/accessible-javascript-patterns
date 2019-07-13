@@ -1,6 +1,7 @@
 body {
     font-family: "Gill Sans", "Gill Sans MT", Calibri, sans-serif;
     margin: 0;
+    padding: 10px;
 }
 
 .visuallyHidden {
@@ -14,11 +15,20 @@ body {
     width: 1px;
 }
 
-.header {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    height: 200px;
+.title {
+    text-align: center;
+}
+
+@media only screen and (min-width: 600px) {
+    .header {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        height: 200px;
+    }
+    .title {
+        text-align: left;
+    }
 }
 
 main {
@@ -31,19 +41,30 @@ main {
 
 .bio {
     display: inline-block;
-    width: 40%;
     font-size: 18px;
-    text-align: justify;
-    vertical-align: top;
 }
 
 .gallery-side {
-    display: inline-block;
-    width: 59%;
+    width: 100%;
 }
 
 .gallery-bottom {
-    width: 100%;
+    display: none;
+}
+
+@media only screen and (min-width: 600px) {
+    .bio {
+        width: 40%;
+        text-align: justify;
+        vertical-align: top;
+    }
+    .gallery-bottom {
+        width: 100%;
+    }
+    .gallery-side {
+        display: inline-block;
+        width: 59%;
+    }
 }
 
 .section {

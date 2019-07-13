@@ -29,8 +29,6 @@ export default class BasicMenubarItem {
         }
     }
 
-
-
     handleBlur() {
         this.menu.hasFocus = false;
         setTimeout(this.popupMenu.close.bind(this.popupMenu, false), 300);
