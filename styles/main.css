@@ -59,6 +59,7 @@ main {
         vertical-align: top;
     }
     .gallery-bottom {
+        display: block;
         width: 100%;
     }
     .gallery-side {
