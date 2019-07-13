@@ -205,15 +205,15 @@
       <img class="gallery-bottom" src="./assets/boodt-2.jpg" alt=""></img>
     </section>
 
-    <button id="open-modal" class="btn btn_open" >I want to receive bird images</button>
+    <button id="open-dialog" class="btn btn_open" >I want to receive bird images</button>
 </main>
 
 <div role="dialog"
-    id="address"
-    aria-labelledby="address_label"
+    id="mainDialog"
+    aria-labelledby="main_dialog_label"
     aria-modal="true"
     class="hidden">
-  <h2 id="address_label" class="dialog_header">
+  <h2 id="main_dialog_label" class="dialog_header">
     Add Delivery Address
   </h2>
   <div class="dialog_form">
@@ -246,18 +246,18 @@
     </button>
   </div>
 </div>
-<!--  Second modal to open on top of the first modal  -->
-<div id="privacy"
+
+<div id="moreInfoDialog"
      role="dialog"
-     aria-labelledby="privacy_label"
-     aria-describedby="privacy_desc"
+     aria-labelledby="more_info_label"
+     aria-describedby="more_info_desc"
      aria-modal="true"
      class="hidden">
-  <h2 id="privacy_label" class="dialog_header">
+  <h2 id="more_info_label" class="dialog_header">
     We care about you!
   </h2>
-  <div id="privacy_desc" class="dialog_desc">
-    <p tabindex="-1" id="privacy_para1">
+  <div id="more_info_desc" class="dialog_desc">
+    <p tabindex="-1" id="more_para_1">
         Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros. Nullam malesuada erat ut turpis. Suspendisse urna nibh, viverra non, semper suscipit, posuere a, pede.
     </p>
     <p>
@@ -318,13 +318,13 @@
     </ul>
   </div>
   <div class="dialog_form_actions">
-    <button id="back-address" class="btn btn_ok" >
+    <button id="back-main" class="btn btn_ok" >
       Back to the address form
     </button>
   </div>
 </div>
-<!--  Dialog that replaces dialog 1.  -->
-<div id="confirm"
+
+<div id="confirmDialog"
      role="dialog"
      aria-labelledby="confirm_label"
      aria-describedby="confirm_desc"
@@ -337,7 +337,7 @@
     You will now receive great bird pictures.
   </p>
   <div class="dialog_form_actions">
-    <button id="confirm_close_btn" class="btn btn_ok">
+    <button id="confirm-close" class="btn btn_ok">
       OK
     </button>
   </div>

@@ -4,24 +4,22 @@ import Dialog from './Dialog.js';
 export default class AccessibleModal {
     constructor() {
         this.focus = new Focus();
+        const openButton = document.querySelector('#open-dialog');
+        const moreButton = document.querySelector('#open-more');
+        const okButton = document.querySelector('#open-ok');
+        const cancelButton = document.querySelector('#cancel');
+        const backButton = document.querySelector('#back-main');
+        const closeButton = document.querySelector('#confirm-close');
+
         document.addEventListener('keyup', event => this.focus.handleEscape(event));
-        document.querySelector('#open-modal')
-            .addEventListener('click', event => this.openDialog('address', event.target));
-        document.querySelector('#open-more')
-            .addEventListener('click', event => this.openDialog('privacy', event.target, 'privacy_para1'));
 
-        document.querySelector('#open-ok')
-            .addEventListener('click', event => this.replaceDialog('confirm', undefined, 'confirm_close_btn'));
+        openButton.addEventListener('click', event => this.openDialog('mainDialog', event.target));
+        moreButton.addEventListener('click', event => this.openDialog('moreInfoDialog', event.target, 'more_para_1'));
+        okButton.addEventListener('click', event => this.replaceDialog('confirmDialog', undefined, 'confirm-close'));
 
-
-        document.querySelector('#cancel')
-            .addEventListener('click', event => this.closeDialog(event.target));
-
-        document.querySelector('#back-address')
-            .addEventListener('click', event => this.closeDialog(event.target));
-
-        document.querySelector('#confirm_close_btn')
-            .addEventListener('click', event => this.closeDialog(event.target));
+        cancelButton.addEventListener('click', event => this.closeDialog(event.target));
+        backButton.addEventListener('click', event => this.closeDialog(event.target));
+        closeButton.addEventListener('click', event => this.closeDialog(event.target));
     }
     openDialog(dialogId, focusAfterClosed, focusFirst) {
         new Dialog(dialogId, focusAfterClosed, focusFirst, this.focus);

@@ -1,5 +1,5 @@
 
-const OPEN_DIALOG = 'has-dialog';
+const HAS_DIALOG = 'has-dialog';
 const BACKDROP = 'dialog-backdrop';
 
 /**
@@ -74,7 +74,7 @@ export default class Dialog {
         this.backdropNode.classList.add('active');
 
         // Disable scroll on the body element
-        document.body.classList.add(OPEN_DIALOG);
+        document.body.classList.add(HAS_DIALOG);
     }
 
     setFocusAfterClosed(focusAfterClosed) {
@@ -115,7 +115,7 @@ export default class Dialog {
         if (this.focus.OpenDialogList.length > 0) {
             this.focus.getCurrentDialog().addListeners();
         } else {
-            document.body.classList.remove(OPEN_DIALOG);
+            document.body.classList.remove(HAS_DIALOG);
         }
     }
 

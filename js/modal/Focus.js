@@ -3,7 +3,7 @@ import { isFocusable } from '../helpers.js';
 
 export default class Focus {
     constructor() {
-        this.OpenDialogList = this.OpenDialogList || new Array(0);
+        this.OpenDialogList = this.OpenDialogList || [];
         this.IgnoreUtilFocusChanges = false;
     }
     handleEscape(event) {

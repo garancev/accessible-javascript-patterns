@@ -29,10 +29,7 @@ export default class BasicMenubarItem {
         }
     }
 
-    handleFocus() {
-        this.menu.hasFocus = true;
-        this.popupMenu.open();
-    }
+
 
     handleBlur() {
         this.menu.hasFocus = false;
@@ -41,6 +38,10 @@ export default class BasicMenubarItem {
 
     handleMouseover() {
         this.hasHover = true;
+        this.popupMenu.open();
+    }
+    handleFocus() {
+        this.menu.hasFocus = true;
         this.popupMenu.open();
     }
 
